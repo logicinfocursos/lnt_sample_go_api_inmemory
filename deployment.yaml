@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-inmemory
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-inmemory
+  template:
+    metadata:
+      labels:
+        app: api-inmemory
+    spec:
+      containers:
+        - name: api-inmemory
+          image: api_inmemory:latest
+          ports:
+            - containerPort: 8091
+          env:
+            - name: API_PORT
+              value: "8091"
