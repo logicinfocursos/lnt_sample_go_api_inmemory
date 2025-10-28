@@ -1,0 +1,5 @@
+# Ignorar arquivos de configuração e dependências
+.env
+movies.json
+/go.sum
+/go.mod
