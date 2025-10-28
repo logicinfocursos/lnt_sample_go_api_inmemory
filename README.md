@@ -39,8 +39,21 @@ No diretório do projeto, rode:
 ```
 go run main.go
 ```
-
 Acesse a API em: http://localhost:8080 ou na porta definida no .env (exemplo: API_PORT=8091)
+
+### 1.4. Criar o arquivo executável
+Para gerar o arquivo .exe (executável para Windows) do seu projeto Go, execute no terminal:
+```
+go build -o api_inmemory.exe main.go
+```
+Isso criará o arquivo api_inmemory.exe no diretório atual. Você pode rodar o executável diretamente no Windows com:
+```
+./api_inmemory.exe
+```
+Se quiser gerar o .exe em outro sistema (Linux/Mac), use:
+```
+GOOS=windows GOARCH=amd64 go build -o api_inmemory.exe main.go
+```
 
 #### 1.4. Endpoints da api:
 - GET /movies - Lista todos os filmes
